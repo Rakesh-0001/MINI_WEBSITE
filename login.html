@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+
+    <form name="form" onsubmit="return validate()" action="web.html">
+        <h1>LOGIN PAGE</h1>
+        <input type="text" name="name" placeholder="username"/>
+        <input type="password" name="password" placeholder="password"  />
+        <a>Forgot password?</a>
+        <input type="submit" class="sub" value="submit" />
+
+    </form>
+
+    <script>
+        function validate() {
+
+            var name = document.form.name.value;
+            var password = document.form.password.value;
+            if (name == null || name=="") {
+
+                alert("name is empty!");
+                return false;
+                
+            }
+            else if (password.length < 8) {
+                alert("password must be 8 letter");
+                return false;
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
